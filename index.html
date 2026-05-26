@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure d'Aide à Domicile - Aubagne & Bouches-du-Rhône</title>
+    
+    <!-- CONFIGURATION DES VARIABLES (À modifier pas à pas ensemble) -->
+    <script>
+        const CONFIG = {
+            nomEntreprise: "Horizon Autonomie & Confort", // Nom de ta structure
+            telephone: "04 42 XX XX XX",                 // Ton numéro de téléphone
+            email: "contact@horizon-autonomie.fr",       // Ton adresse email
+            adresse: "120 Rue de la République",         // Ton adresse à Aubagne
+            ville: "13400 Aubagne",
+            numeroAgrement: "SAP/XXXXXXXXX",             // Ton numéro d'agrément SAP
+        };
+    </script>
+
+    <!-- Styles CSS intégrés pour un chargement immédiat et moderne -->
+    <style>
+        :root {
+            --primary: #1e3a8a; /* Bleu profond rassurant pour les familles */
+            --secondary: #10b981; /* Vert dynamique pour le confort et le recrutement */
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--dark); background: #ffffff; line-height: 1.6; }
+        
+        /* Header & Navigation */
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); sticky: top; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+        .logo { font-size: 1.4rem; font-weight: bold; color: var(--primary); }
+        .nav-links a { text-decoration: none; color: var(--dark); margin-left: 1.5rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .btn-nav { background: var(--secondary); color: white !important; padding: 0.5rem 1rem; border-radius: 5px; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 5rem 2rem; text-align: center; }
+        .hero-content { max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; color: var(--gray); margin-bottom: 2rem; }
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: transform 0.2s, background 0.3s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-secondary { background: var(--secondary); color: white; }
+
+        /* Bandeau Réassurance */
+        .badges { background: var(--primary); color: white; padding: 1rem; text-align: center; }
+        .badges-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; }
+
+        /* Sections Générales */
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .section-title p { color: var(--gray); }
+
+        /* Grille des Services (2 colonnes d'égal intérêt) */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+        .service-card { background: var(--light); padding: 2.5rem; border-radius: 10px; border-top: 5px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .service-card.confort { border-top-color: var(--secondary); }
+        .service-card h3 { font-size: 1.6rem; margin-bottom: 1rem; color: var(--dark); }
+        .service-card ul { list-style-type: none; margin: 1.5rem 0; }
+        .service-card ul li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; }
+        .service-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--secondary); font-weight: bold; }
+
+        /* Recrutement */
+        .recrutement-bg { background: #f3f4f6; }
+        .recrutement-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center; }
+        .recrute-advantages h3 { margin-bottom: 1rem; color: var(--primary); }
+        .recrute-advantages li { margin-bottom: 0.8rem; list-style: none; }
+        
+        /* Formulaires */
+        form { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .form-group input:focus { border-color: var(--primary); outline: none; }
+        
+        /* Contact & Footer */
+        .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        footer { background: var(--dark); color: #9ca3af; padding: 3rem 2rem 1rem 2rem; font-size: 0.9rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+        .footer-col h4 { color: white; margin-bottom: 1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.5rem; }
+        .footer-legal { text-align: center; border-top: 1px solid #374151; padding-top: 1.5rem; font-size: 0.8rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Pour simplifier sans JS complexe pour l'instant */
+            .hero h1 { font-size: 2rem; }
+            section { padding: 3rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bar de Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" id="nav-logo">Structure AAD</div>
+            <nav class="nav-links">
+                <a href="#services">Nos Services</a>
+                <a href="#recrutement">Nous Rejoindre</a>
+                <a href="#contact" class="btn-nav">Demander un Devis</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Vitrine (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bien vivre chez soi, à chaque étape de la vie.</h1>
+            <p>Votre structure d'aide et de services à la personne agréée dans les Bouches-du-Rhône. De l'accompagnement du grand âge au confort de votre quotidien.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+                <a href="#recrutement" class="btn btn-secondary">Rejoindre notre équipe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bandeau de Réassurance Légale / Avantages -->
+    <div class="badges">
+        <div class="badges-container">
+            <div>🛡️ Agrément Conseil Départemental 13</div>
+            <div>💰 -50% de Crédit d'Impôt Immédiat</div>
+            <div>✨ Évaluation HAS Conforme</div>
+        </div>
+    </div>
+
+    <!-- Section Services -->
+    <section id="services">
+        <div class="section-title">
+            <h2>Nos Prestations sur Aubagne & le 13</h2>
+            <p>Des solutions sur-mesure pour les personnes vulnérables et les ménages actifs.</p>
+        </div>
+        
+        <div class="services-grid">
+            <!-- Autonomie / Cible Vulnérable -->
+            <div class="service-card">
+                <h3>Accompagnement & Autonomie</h3>
+                <p><strong>La sécurité et la bienveillance au cœur du quotidien.</strong> Parce que rester chez soi est un choix précieux, nos auxiliaires de vie qualifiés accompagnent vos proches.</p>
+                <ul>
+                    <li>Aide au lever, au coucher et à la toilette</li>
+                    <li>Préparation et aide à la prise des repas</li>
+                    <li>Garde de nuit et présence rassurante</li>
+                    <li>Accompagnement aux courses et sorties</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: var(--gray);">* Structure agréée APA, PCH et Mutuelles.</p>
+            </div>
+
+            <!-- Confort / Cible Active -->
+            <div class="service-card confort">
+                <h3>Confort & Sérénité</h3>
+                <p><strong>Libérez votre temps, nous prenons soin de votre maison.</strong> Pour les actifs, les familles ou les seniors valides : profitez d'un intérieur impeccable sans contrainte.</p>
+                <ul>
+                    <li>Ménage régulier ou de printemps</li>
+                    <li>Repassage soigné à domicile</li>
+                    <li>Entretien complet du linge</li>
+                    <li>Grand nettoyage (emménagement/déménagement)</li>
+                </ul>
+                <p style="font-size: 0.85rem; color: var(--gray);">* Aucun engagement de durée, résiliable à tout moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Recrutement -->
+    <section class="recrutement-bg" id="recrutement">
+        <div class="section-title">
+            <h2>Plus qu’un métier, une aventure humaine</h2>
+            <p>Nous recrutons activement des auxiliaires de vie et assistants ménagers sur le secteur d'Aubagne.</p>
+        </div>
+
+        <div class="recrutement-box">
+            <div class="recrute-advantages">
+                <h3>Nos engagements pour votre équilibre :</h3>
+                <ul>
+                    <li>Plannings stables et sectorisés (pas de trajets à rallonge)</li>
+                    <li>Contrat en CDI à temps choisi (partiel ou complet)</li>
+                    <li>Mutuelle d'entreprise, primes d'assiduité et majorations</li>
+                    <li>Équipe à votre écoute et formations régulières</li>
+                </ul>
+            </div>
+            
+            <!-- Formulaire Candidature -->
+            <form onsubmit="alert('Candidature envoyée avec succès ! Nous vous recontactons sous 48h.'); return false;">
+                <div class="form-group">
+                    <label>Nom & Prénom</label>
+                    <input type="text" required placeholder="Ex: Marie Martin">
+                </div>
+                <div class="form-group">
+                    <label>Poste souhaité</label>
+                    <select>
+                        <option>Auxiliaire de vie / Accompagnant</option>
+                        <option>Assistant(e) ménager(e)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" required placeholder="06 XX XX XX XX">
+                </div>
+                <button type="submit" class="btn btn-secondary" style="width: 100%; border: none; cursor: pointer;">Postuler en 2 clics</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Contact & Devis -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contactez-nous / Demande de devis</h2>
+            <p>Réponse rapide et gratuite.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Nos Coordonnées</h3>
+                <p style="margin: 1rem 0;">N'hésitez pas à nous appeler directement ou à passer à l'agence d'Aubagne.</p>
+                <p>📍 <strong>Adresse :</strong> <span id="info-adresse">...</span></p>
+                <p>📞 <strong>Téléphone :</strong> <span id="info-tel">...</span></p>
+                <p>✉️ <strong>Email :</strong> <span id="info-email">...</span></p>
+                <p style="margin-top: 1.5rem;">🚗 <strong>Zone d'intervention :</strong> Aubagne, Marseille, Aix-en-Provence, La Ciotat et l'ensemble des Bouches-du-Rhône (13).</p>
+            </div>
+
+            <!-- Formulaire Client -->
+            <form onsubmit="alert('Votre demande de devis a bien été transmise. Nous vous rappelons très vite !'); return false;">
+                <div class="form-group">
+                    <label>Votre besoin concerne :</label>
+                    <select>
+                        <option>Un proche en perte d'autonomie (Âge / Handicap)</option>
+                        <option>Des prestations de confort (Ménage / Repassage)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Votre Nom</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Code Postal de la prestation</label>
+                    <input type="text" required placeholder="Ex: 13400">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Recevoir mon devis gratuit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 id="footer-nom">Structure AAD</h4>
+                <p>À votre service dans les Bouches-du-Rhône.</p>
+                <p>Agrément N° : <span id="footer-agrement">...</span></p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Rapides</h4>
+                <ul>
+                    <li><a href="#services" style="color: #9ca3af; text-decoration: none;">Nos Services</a></li>
+                    <li><a href="#recrutement" style="color: #9ca3af; text-decoration: none;">Recrutement</a></li>
+                    <li><a href="#contact" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <p>&copy; 2026 <span id="footer-copy">...</span> - Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #6b7280;">Le vendeur remet gratuitement un devis personnalisé au consommateur à qui il propose une prestation ou un ensemble de prestations de services dont le prix total est supérieur ou égal à 100 € TTC ou au consommateur qui en fait la demande.</p>
+        </div>
+    </footer>
+
+    <!-- Script d'injection des variables -->
+    <script>
+        document.getElementById('nav-logo').innerText = CONFIG.nomEntreprise;
+        document.getElementById('info-adresse').innerText = CONFIG.adresse + ', ' + CONFIG.ville;
+        document.getElementById('info-tel').innerText = CONFIG.telephone;
+        document.getElementById('info-email').innerText = CONFIG.email;
+        document.getElementById('footer-nom').innerText = CONFIG.nomEntreprise;
+        document.getElementById('footer-agrement').innerText = CONFIG.numeroAgrement;
+        document.getElementById('footer-copy').innerText = CONFIG.nomEntreprise;
+    </script>
+</body>
+</html>
