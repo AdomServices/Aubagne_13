@@ -7,10 +7,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-[#fcfaff] font-sans antialiased text-slate-900">
+<body class="bg-slate-50 font-sans antialiased text-slate-900">
 
     <script>
-        // CONFIGURATION CENTRALE DES DONNÉES
+        // CONFIGURATION STRICTE DES DONNÉES DE L'ENTREPRISE
         const CONFIG = {
             nomEntreprise: "ADOM SERVICES",
             telephone: "04 42 01 30 13",
@@ -35,124 +35,86 @@
         });
     </script>
 
-    <nav class="fixed w-full z-50 bg-white shadow-sm border-b border-slate-100">
+    <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-            
-            <div class="flex items-center gap-2">
-                <svg class="w-9 h-9" viewBox="0 0 334 321" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M167 0L211.5 110.5L333.5 117.5L240.5 197L268.5 317.5L167 253.5L65.5 317.5L93.5 197L0.5 117.5L122.5 110.5L167 0Z" fill="url(#gradient-logo)"/>
-                    <path d="M110 112L220 132L305 118" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                    <path d="M75 160L190 182L270 172" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                    <defs>
-                        <linearGradient id="gradient-logo" x1="0" y1="0" x2="334" y2="317" gradientUnits="userSpaceOnUse">
-                            <stop offset="0%" stop-color="#9d174d" />
-                            <stop offset="40%" stop-color="#db2777" />
-                            <stop offset="100%" stop-color="#6b21a8" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="flex flex-col">
-                    <span class="font-black text-lg tracking-tight text-[#2e1045] uppercase leading-none">Adom</span>
-                    <span class="text-[10px] font-bold tracking-widest text-[#db2777] uppercase leading-none mt-0.5">Services</span>
-                </div>
+            <div class="flex items-center gap-3">
+                <img src="LOGO TRANSP.png" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain">
+                <span class="font-bold text-xl tracking-tight text-slate-950">ADOM SERVICES</span>
             </div>
-
-            <div class="hidden md:flex gap-8 items-center font-medium text-slate-600 text-sm">
-                <a href="#home" class="hover:text-pink-600 transition">Home</a>
-                <a href="#missions" class="hover:text-pink-600 transition">Profiles</a>
-                <a href="#agence" class="hover:text-pink-600 transition">Resources</a>
-                <a href="#contact" class="hover:text-pink-600 transition">Contact</a>
-                <a href="#contact" class="text-white px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wider transition bg-gradient-to-r from-[#db2777] to-[#7c3aed] hover:brightness-110 shadow-sm">
-                    Gestion de services
-                </a>
+            <div class="hidden md:flex gap-8 items-center font-semibold text-slate-700 text-sm">
+                <a href="#missions" class="transition hover:text-[#ec4899]">Nos Missions</a>
+                <a href="#agence" class="transition hover:text-[#ec4899]">L'Agence</a>
+                <a href="#recrutement" class="transition hover:text-[#ec4899]">Recrutement</a>
+                <a href="#contact" class="text-white px-5 py-2 rounded-lg hover:shadow-lg hover:brightness-110 transition text-xs font-bold uppercase tracking-wider" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">Demander un devis</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="relative text-white pt-40 pb-44 px-4 bg-[#2e1045]">
-        <div class="absolute inset-0 bg-gradient-to-tr from-[#1e0730] via-[#2e1045] to-[#4c1d95] opacity-95"></div>
-        
-        <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
-            <div class="absolute -top-1/4 -left-1/4 w-full h-full rounded-full bg-radial from-pink-500 to-transparent blur-3xl"></div>
-        </div>
-
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/15 rounded-xl px-4 py-2.5 mb-8 shadow-sm">
-                <div class="text-pink-400 text-xl"><i class="fa-solid fa-heart-pulse"></i></div>
-                <div class="text-left">
-                    <div class="txt-exp font-black text-sm uppercase tracking-wide text-white">18 Ans</div>
-                    <div class="text-[10px] uppercase tracking-widest text-slate-300 font-semibold">d'expérience</div>
-                </div>
-            </div>
-
-            <h1 class="text-4xl sm:text-6xl font-black tracking-tight mb-5 max-w-4xl">
+    <section id="accueil" class="pt-36 pb-20 text-center px-4" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-slate-950 mb-6" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                 L'aide à domicile de proximité
             </h1>
-            <p class="text-slate-300 text-base sm:text-lg max-w-3xl font-normal leading-relaxed">
-                De l'accompagnement du grand âge au confort quotidien. Votre partenaire de confiance à <strong class="text-white font-semibold">Aubagne</strong> depuis <span class="text-pink-400 font-bold txt-exp">18 Ans</span>.
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-16">
+                De l'accompagnement du grand âge au confort quotidien. Votre partenaire de confiance à <strong>Aubagne</strong> depuis <span class="txt-exp font-bold">18 Ans</span>.
             </p>
-        </div>
-    </section>
 
-    <section id="missions" class="relative z-20 px-4 pb-24 -mt-24">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
                 
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-pink-50 text-pink-600 shadow-inner">
-                        <i class="fa-solid fa-user-nurse"></i>
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-person-cane"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Accompagnement Senior</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Aide au lever, coucher, toilette et présence rassurante pour le maintien chez soi.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Accompagnement Senior</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Bien vivre chez soi, entre seniors. Aide au lever, au coucher et aide à la toilette.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-purple-50 text-purple-600 shadow-inner">
-                        <i class="fa-solid fa-soap"></i>
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-broom"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Ménage & Entretien</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Entretien complet de votre logement, dépoussiérage, lavage et gestion du cadre de vie.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Ménage & Entretien</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Ménage & ménage en entretien complet du logement et dépoussiérage des surfaces.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-pink-50 text-pink-600 shadow-inner">
-                        <i class="fa-solid fa-car-side"></i>
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-car-side"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Transport Accompagné</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Aide aux déplacements pour vos courses, vos rendez-vous médicaux et sorties sociales.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Transport Accompagné</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Transport accompagnant, transport accompagné pour vos courses et rendez-vous médicaux.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-dumpster"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Déblaiement d'espace</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Vider caves, garages, greniers encombrés et remise en état des espaces techniques.</p>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-purple-50 text-purple-600 shadow-inner">
-                        <i class="fa-solid fa-boxes-packing"></i>
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-utensils"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Préparation des Repas</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Confection de menus variés et équilibrés à votre domicile, selon vos goûts et régimes.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Déblaiement & Encombrants</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Déblaiement complet de caves et greniers, encombrants et nettoyage technique.</p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-pink-50 text-pink-600 shadow-inner">
-                        <i class="fa-solid fa-bowl-food"></i>
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-shirt"></i></div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-slate-950">Entretien du Linge</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Lavage, séchage, pliage et repassage professionnel de votre linge de maison.</p>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Préparation de Repas</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Préparons des repas, préparation de repas équilibrés selon vos goûts au quotidien.</p>
                 </div>
-
-                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-lg hover:shadow-xl transition duration-300 text-center flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4 bg-purple-50 text-purple-600 shadow-inner">
-                        <i class="fa-solid fa-shirt"></i>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">Gestion du Linge</h3>
-                    <p class="text-slate-500 text-xs leading-relaxed">Gestion du linge de maison, entretien, lavage, séchage, pliage et repassage.</p>
-                </div>
-
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-14 max-w-xl mx-auto">
-                <a href="#contact" class="text-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-md bg-gradient-to-r from-[#db2777] to-[#7c3aed] hover:brightness-110 transition flex-1">
+            <div class="flex flex-col sm:flex-row gap-5 justify-center mt-16 max-w-xl mx-auto">
+                <a href="#contact" class="text-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-md hover:brightness-110 transition flex-1" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">
                     Je souhaite un devis
                 </a>
-                <a href="javascript:void(0)" class="global-phone-href border-2 bg-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-sm hover:bg-slate-50 transition flex-1" style="color: #2e1045; border-color: #db2777;">
+                <a href="javascript:void(0)" class="global-phone-href border-2 bg-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-sm hover:bg-slate-100 transition flex-1" style="color: #8b5cf6; border-color: #ec4899;">
                     Nos joindre : <span class="global-phone"></span>
                 </a>
             </div>
@@ -162,59 +124,54 @@
     <section id="agence" class="py-20 px-4 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="text-xs font-bold uppercase tracking-widest block mb-2 text-[#db2777]">Proximité & Bienveillance</span>
+                <span class="text-xs font-bold uppercase tracking-widest block mb-2 text-[#ec4899]">Structure Humaine</span>
                 <h2 class="text-2xl font-bold mb-4 text-slate-900">À vos côtés, 7 avenue Roger Salengro</h2>
-                <p class="text-slate-600 text-sm leading-relaxed">Fondée à Aubagne, ADOM SERVICES est une structure à taille humaine. Face aux grands réseaux impersonnels, nous garantissons un interlocuteur unique pour préserver l'autonomie de vos proches à domicile.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">ADOM SERVICES est une structure de proximité implantée à Aubagne. Nous refusons les méthodes des grands réseaux impersonnels pour nous concentrer sur une écoute attentive et un accompagnement sur-mesure de vos proches.</p>
             </div>
-            <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex gap-5 items-start">
-                 <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 bg-purple-50 text-purple-600 shadow-sm"><i class="fa-solid fa-tags"></i></div>
+            <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex gap-5 items-start">
+                 <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 bg-purple-50 text-purple-600"><i class="fa-solid fa-percent"></i></div>
                  <div>
-                    <h3 class="font-bold text-base text-slate-900 mb-1">Avance Immédiate du Crédit d'Impôt</h3>
-                    <p class="text-slate-600 text-xs leading-relaxed">Bénéficiez en temps réel de 50% de crédit d'impôt immédiat URSSAF sur toutes nos prestations d'aide à domicile. Vous ne réglez que la moitié de la facture.</p>
-                    <p id="txt-agrement" class="text-[10px] font-bold text-slate-400 mt-2 pt-2 border-t border-slate-100"></p>
+                    <h3 class="font-bold text-base text-slate-900 mb-1">Crédit d'impôt immédiat de 50%</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Grâce à l'avance immédiate de l'URSSAF liée à notre agrément SAP, vous ne payez instantanément que la moitié de vos factures de prestations à domicile.</p>
+                    <p id="txt-agrement" class="text-[10px] font-semibold text-slate-400 mt-2 pt-2 border-t border-slate-200"></p>
                  </div>
             </div>
         </div>
     </section>
 
+    <section id="recrutement" class="py-16 px-4 text-white text-center" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-3">Rejoignez notre équipe à Aubagne</h2>
+            <p class="text-slate-300 text-sm mb-6 max-w-xl mx-auto">Vous êtes professionnel de l'aide à la personne ? Intégrez une structure locale valorisante et stable.</p>
+            <a href="#contact" class="inline-block bg-white text-slate-950 font-bold px-8 py-3 rounded-xl transition hover:bg-slate-100 text-sm shadow-md">Postuler</a>
+        </div>
+    </section>
+
     <section id="contact" class="py-20 px-4 bg-slate-50">
-        <div class="max-w-2xl mx-auto bg-[#2e1045] rounded-2xl p-8 text-white shadow-xl">
+        <div class="max-w-2xl mx-auto bg-slate-900 rounded-3xl p-8 text-white shadow-xl" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
             <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold">Contact & Demande de devis</h2>
-                <p class="text-slate-400 text-xs mt-1">Étude et devis gratuits sous 48h.</p>
+                <h2 class="text-2xl font-bold">Contact / Demande de devis</h2>
+                <p class="text-slate-400 text-xs mt-1">Étude gratuite et réponse sous 48h.</p>
             </div>
-            <form onsubmit="alert('Votre message a bien été envoyé.'); return false;" class="space-y-4 text-slate-900">
+            <form onsubmit="alert('Merci, votre demande a bien été envoyée.'); return false;" class="space-y-4 text-slate-900">
                 <div class="grid sm:grid-cols-2 gap-4">
                     <input type="text" required placeholder="Nom & Prénom" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
                     <input type="tel" required placeholder="Téléphone" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
                 </div>
                 <input type="email" required placeholder="Adresse Email" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
-                <textarea placeholder="Votre besoin..." rows="3" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none"></textarea>
-                <button type="submit" class="w-full text-white font-bold py-3 rounded-xl text-sm bg-gradient-to-r from-[#db2777] to-[#7c3aed] hover:brightness-110 transition shadow-md">Envoyer la demande</button>
+                <textarea placeholder="Décrivez votre besoin..." rows="3" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none"></textarea>
+                <button type="submit" class="w-full text-white font-bold py-3 rounded-xl text-sm transition shadow-md" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">Envoyer la demande</button>
             </form>
         </div>
     </section>
 
-    <footer class="text-slate-400 px-4 py-12 bg-[#1a092a] text-xs">
+    <footer class="text-slate-400 px-4 py-12 text-xs" style="background-color: #020617;">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
             <div class="flex items-center gap-3">
-                <div class="bg-white p-1.5 rounded-lg shadow-sm">
-                    <svg class="w-9 h-9" viewBox="0 0 334 321" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M167 0L211.5 110.5L333.5 117.5L240.5 197L268.5 317.5L167 253.5L65.5 317.5L93.5 197L0.5 117.5L122.5 110.5L167 0Z" fill="url(#gradient-logo-footer)"/>
-                        <path d="M110 112L220 132L305 118" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                        <path d="M75 160L190 182L270 172" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                        <defs>
-                            <linearGradient id="gradient-logo-footer" x1="0" y1="0" x2="334" y2="317" gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#9d174d" />
-                                <stop offset="40%" stop-color="#db2777" />
-                                <stop offset="100%" stop-color="#6b21a8" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
+                <img src="LOGO TRANSP.png" alt="Logo" class="w-10 h-10 object-contain bg-white rounded-lg p-1">
                 <div>
                     <h4 class="text-white font-bold text-sm mb-0.5">ADOM SERVICES</h4>
-                    <p>Votre bien-être au quotidien.</p>
+                    <p>L'aide à domicile de proximité.</p>
                 </div>
             </div>
             <div>
@@ -224,8 +181,8 @@
                 <p><i class="fa-solid fa-map-pin mr-1 text-pink-500"></i> <span class="global-adresse"></span></p>
             </div>
             <div>
-                <h4 class="text-white font-semibold text-sm mb-2">Secteur Aubagne</h4>
-                <p>Aubagne, Gémenos, Roquevaire, Auriol, La Penne-sur-Huveaune et alentours.</p>
+                <h4 class="text-white font-semibold text-sm mb-2">Zone d'intervention</h4>
+                <p>Aubagne, Roquevaire, Auriol, Gémenos, La Penne-sur-Huveaune et communes limitrophes.</p>
             </div>
         </div>
         <div class="max-w-7xl mx-auto border-t border-white/5 mt-8 pt-4 text-center text-slate-500">
