@@ -6,6 +6,16 @@
     <title>ADOM SERVICES - Aide à domicile à Aubagne</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style type="text/css">
+        :root {
+            --color-marine-950: #0a1128;
+            --color-marine-900: #1c2541;
+            --color-marine-800: #3b4c74;
+            --color-rose-primary: #ec4899;
+            --color-violet-primary: #8b5cf6;
+        }
+    </style>
 </head>
 <body class="bg-white font-sans antialiased" style="color: #1c2541;">
 
@@ -38,9 +48,7 @@
     <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white shadow-md" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
-                    <i class="fa-solid fa-heart text-xl"></i>
-                </div>
+                <img src="https://i.ibb.co/Xxd9Y7Q/image-6.png" alt="Logo ADOM SERVICES" class="w-10 h-10 rounded-lg shadow-md">
                 <span class="font-bold text-xl tracking-tight" style="color: #0a1128;">ADOM SERVICES</span>
             </div>
             <div class="hidden md:flex gap-8 items-center font-semibold">
@@ -115,55 +123,14 @@
         </div>
     </section>
 
-    <section id="agence" class="py-20 px-4 bg-white">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-xs font-bold uppercase tracking-wider block mb-2" style="color: #ec4899;">Proximité & Humain depuis 2008</span>
-                <h2 class="text-3xl font-bold mb-6" style="color: #0a1128;">Votre agence au cœur d'Aubagne</h2>
-                <p class="text-slate-600 mb-4 leading-relaxed">Depuis 2008, <strong>ADOM SERVICES</strong> accompagne les familles des Bouches-du-Rhône. Face aux grands réseaux nationaux dématérialisés, nous faisons le choix d'un ancrage profondément local au 7 avenue Roger Salengro à Aubagne.</p>
-                <p class="text-slate-600 leading-relaxed">Chaque dossier débute par une évaluation gratuite à votre domicile pour sélectionner l'intervenant idéal.</p>
-            </div>
-            <div class="bg-slate-50 border border-slate-200 p-8 rounded-2xl">
-                <h3 class="font-bold text-xl mb-4" style="color: #0a1128;">Vos Avantages Financiers</h3>
-                <div class="space-y-4 text-sm text-slate-700">
-                    <p><strong>💳 Crédit d'impôt immédiat de 50% :</strong> Grâce à l'avance de l'URSSAF, vous ne payez que la moitié de la facture.</p>
-                    <p><strong>📋 Prise en charge APA & PCH :</strong> Notre agrément permet d'activer directement vos allocations d'autonomie.</p>
-                    <p id="txt-agrement" class="text-xs font-semibold text-slate-500 pt-2 border-t border-slate-200"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 px-4 bg-slate-50">
-        <div class="max-w-3xl mx-auto rounded-3xl p-8 sm:p-12 text-white shadow-xl" style="background: linear-gradient(135deg, #0a1128, #1c2541);">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold">Demande de devis gratuit</h2>
-                <p class="text-slate-400 text-sm mt-2">Réponse sous 48h. Aucun engagement.</p>
-            </div>
-            <form onsubmit="alert('Demande de devis transmise avec succès ! Notre conseiller vous recontacte rapidement.'); return false;" class="space-y-4 text-slate-900">
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <input type="text" required placeholder="Nom & Prénom" class="w-full bg-white px-4 py-3 rounded-lg outline-none text-sm border-2 border-transparent focus:border-pink-500">
-                    <input type="tel" required placeholder="Téléphone" class="w-full bg-white px-4 py-3 rounded-lg outline-none text-sm border-2 border-transparent focus:border-pink-500">
-                </div>
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <input type="email" required placeholder="Adresse Email" class="w-full bg-white px-4 py-3 rounded-lg outline-none text-sm border-2 border-transparent focus:border-pink-500">
-                    <select class="w-full bg-white px-4 py-3 rounded-lg outline-none text-sm text-slate-500 border-2 border-transparent focus:border-pink-500">
-                        <option>Aide à l'autonomie (Senior / Handicap)</option>
-                        <option>Ménage & Repassage quotidien</option>
-                        <option>Autre demande</option>
-                    </select>
-                </div>
-                <textarea placeholder="Décrivez brièvement votre besoin..." rows="4" class="w-full bg-white px-4 py-3 rounded-lg outline-none text-sm border-2 border-transparent focus:border-pink-500"></textarea>
-                <button type="submit" class="w-full text-white font-bold py-3 rounded-lg hover:brightness-110 transition text-sm shadow-md" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">Envoyer ma demande</button>
-            </form>
-        </div>
-    </section>
-
     <footer class="text-slate-400 px-4 py-12 border-t border-slate-800" style="background-color: #0a1128;">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-                <h4 class="text-white font-bold text-base mb-3">ADOM SERVICES</h4>
-                <p>Votre structure de proximité pour l'autonomie et le confort quotidien à Aubagne.</p>
+            <div class="flex items-center gap-3">
+                 <img src="https://i.ibb.co/Xxd9Y7Q/image-6.png" alt="Logo ADOM SERVICES" class="w-10 h-10 rounded-lg">
+                <div>
+                    <h4 class="text-white font-bold text-base mb-1">ADOM SERVICES</h4>
+                    <p>Votre structure de proximité à Aubagne.</p>
+                </div>
             </div>
             <div>
                 <h4 class="text-white font-bold text-base mb-3">Nous contacter</h4>
