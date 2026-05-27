@@ -41,7 +41,6 @@
     <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-            <!-- LE LOGO EST AGRANDI ET SEUL, LE CLIC RAMÈNE À L'ACCUEIL -->
             <a href="#accueil" class="flex items-center h-full hover:opacity-90 transition">
                 <img src="New LOGO png.png" alt="ADOM SERVICES - L'aide à domicile de proximité" class="h-14 w-auto object-contain">
             </a>
@@ -54,12 +53,12 @@
         </div>
     </nav>
 
-    <!-- SECTION ACCUEIL AVEC EFFET FILIGRANE GEMINI -->
+    <!-- SECTION ACCUEIL -->
     <section id="accueil" class="relative pt-40 pb-20 text-center px-4 overflow-hidden" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
         
-        <!-- FILIGRANE EMBLÈME IDENTITY (EFFET GEMINI ANIMÉ) -->
-        <div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
-            <img src="LOGO TRANSP_2.png" alt="" class="w-[600px] md:w-[800px] max-w-full h-auto opacity-[0.03] object-contain animate-[pulse_4s_ease-in-out_infinite]">
+        <!-- CORRECTION DU FILIGRANE : Changement de l'ordre z-index, retrait du pointeur et ajustement de l'opacité à 4% pour être sûr qu'il soit visible -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+            <img src="LOGO TRANSP_2.png" alt="" class="w-[500px] md:w-[700px] max-w-[90%] h-auto opacity-[0.04] object-contain animate-[pulse_4s_ease-in-out_infinite] block">
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
@@ -70,7 +69,7 @@
                 De l'accompagnement du grand âge au confort quotidien. Votre partenaire de confiance à <strong>Aubagne</strong> depuis <span class="txt-exp font-bold">18 Ans</span>.
             </p>
 
-            <div id="missions" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+            <div id="missions" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left relative z-10">
                 
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition flex gap-5 items-start">
                     <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-person-cane"></i></div>
@@ -121,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col sm:flex-row gap-5 justify-center mt-16 max-w-xl mx-auto relative z-10">
+            <div class="flex flex-col sm:flex-row gap-5 justify-center mt-16 max-w-xl mx-auto relative z-20">
                 <a href="#contact" class="text-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-md hover:brightness-110 transition flex-1" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">
                     Je souhaite un devis
                 </a>
@@ -183,7 +182,6 @@
     <!-- FOOTER -->
     <footer class="text-slate-400 px-4 py-12 text-xs" style="background-color: #020617;">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <!-- LE LIEN DU FOOTER RETOURNE À L'ACCUEIL -->
             <a href="#accueil" class="flex items-center gap-3 hover:opacity-80 transition group">
                 <img src="New LOGO png.png" alt="Logo ADOM SERVICES" class="h-12 w-auto object-contain bg-white rounded-lg p-1.5">
                 <div>
