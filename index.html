@@ -56,16 +56,16 @@
     <!-- SECTION ACCUEIL -->
     <section id="accueil" class="relative pt-40 pb-20 text-center px-4 overflow-hidden" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
         
-        <!-- CORRECTION DU FILIGRANE : Changement de l'ordre z-index, retrait du pointeur et ajustement de l'opacité à 4% pour être sûr qu'il soit visible -->
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <img src="LOGO TRANSP_2.png" alt="" class="w-[500px] md:w-[700px] max-w-[90%] h-auto opacity-[0.04] object-contain animate-[pulse_4s_ease-in-out_infinite] block">
+        <!-- FILIGRANE AJUSTÉ : Fixe (sans clignotement), opacité renforcée à 15% et calé sur la droite -->
+        <div class="absolute inset-y-0 right-0 z-0 flex items-center justify-end pointer-events-none select-none w-1/2 overflow-hidden">
+            <img src="LOGO TRANSP_2.png" alt="" class="w-[450px] md:w-[650px] max-w-none h-auto opacity-[0.15] object-contain translate-x-12 md:translate-x-20 block">
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
-            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-slate-950 mb-6" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-slate-950 mb-6 relative z-10" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                 L'aide à domicile de proximité
             </h1>
-            <p class="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-16">
+            <p class="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-16 relative z-10">
                 De l'accompagnement du grand âge au confort quotidien. Votre partenaire de confiance à <strong>Aubagne</strong> depuis <span class="txt-exp font-bold">18 Ans</span>.
             </p>
 
