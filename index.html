@@ -22,8 +22,7 @@
             codePostal: "13400",
             ville: "AUBAGNE",
             numeroAgrement: "SAP/504789363",
-            anneeCreation: 2008,
-            formspreeId: "mzdwkqgg" // À remplacer par votre ID Formspree
+            anneeCreation: 2008
         };
         
         document.addEventListener("DOMContentLoaded", () => {
@@ -39,12 +38,14 @@
         });
     </script>
 
+    <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL3yYFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURf///6enp2g0p9YAAAA9SURBVGpt7cExEQAAAMKg9U9tDB+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwNms4AAV99v8QAAAAASUVORK5CYII=" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain">
+            <!-- LE LIEN AUTOUR DU LOGO RETOURNE À L'ACCUEIL -->
+            <a href="#accueil" class="flex items-center gap-3 hover:opacity-90 transition">
+                <img src="New LOGO png.png" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain">
                 <span class="font-bold text-xl tracking-tight text-slate-950">ADOM SERVICES</span>
-            </div>
+            </a>
             <div class="hidden md:flex gap-8 items-center font-semibold text-slate-700 text-sm">
                 <a href="#missions" class="transition hover:text-[#ec4899]">Nos Missions</a>
                 <a href="#agence" class="transition hover:text-[#ec4899]">L'Agence</a>
@@ -54,6 +55,7 @@
         </div>
     </nav>
 
+    <!-- SECTION ACCUEIL -->
     <section id="accueil" class="pt-36 pb-20 text-center px-4" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
         <div class="max-w-7xl mx-auto relative z-10">
             <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-slate-950 mb-6" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -119,18 +121,19 @@
                     Je souhaite un devis
                 </a>
                 <a href="javascript:void(0)" class="global-phone-href border-2 bg-white px-8 py-4 rounded-xl font-bold text-sm text-center shadow-sm hover:bg-slate-100 transition flex-1" style="color: #8b5cf6; border-color: #ec4899;">
-                    Nos joindre : <span class="global-phone"></span>
+                    Nous joindre : <span class="global-phone"></span>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- SECTION AGENCE -->
     <section id="agence" class="py-20 px-4 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest block mb-2 text-[#ec4899]">Structure Humaine</span>
                 <h2 class="text-2xl font-bold mb-4 text-slate-900">À vos côtés, 7 avenue Roger Salengro</h2>
-                <p class="text-slate-600 text-sm leading-relaxed">ADOM SERVICES est une structure de proximité implantée à Aubagne. Nous refusons les méthodes des grands réseaux pour nous concentrer sur une écoute attentive et un accompagnement sur-mesure de vos proches.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">ADOM SERVICES is une structure de proximité implantée à Aubagne. Nous refusons les méthodes des grands réseaux pour nous concentrer sur une écoute attentive et un accompagnement sur-mesure de vos proches.</p>
             </div>
             <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex gap-5 items-start">
                  <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 bg-purple-50 text-purple-600"><i class="fa-solid fa-percent"></i></div>
@@ -143,6 +146,7 @@
         </div>
     </section>
 
+    <!-- SECTION RECRUTEMENT -->
     <section id="recrutement" class="py-16 px-4 text-white text-center" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-2xl font-bold mb-3">Rejoignez notre équipe à Aubagne</h2>
@@ -151,6 +155,7 @@
         </div>
     </section>
 
+    <!-- SECTION CONTACT / FORMULAIRE -->
     <section id="contact" class="py-20 px-4 bg-slate-50">
         <div class="max-w-2xl mx-auto bg-slate-900 rounded-3xl p-8 text-white shadow-xl" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
             <div class="text-center mb-8">
@@ -170,15 +175,17 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="text-slate-400 px-4 py-12 text-xs" style="background-color: #020617;">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="flex items-center gap-3">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAMAAAAL3yYFAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURf///6enp2g0p9YAAAA9SURBVGpt7cExEQAAAMKg9U9tDB+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwNms4AAV99v8QAAAAASUVORK5CYII=" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain bg-white rounded-lg p-1">
+            <!-- LE LIEN RETOURNE AUSSI À L'ACCUEIL DEPUIS LE FOOTER -->
+            <a href="#accueil" class="flex items-center gap-3 hover:opacity-80 transition group">
+                <img src="New LOGO png.png" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain bg-white rounded-lg p-1">
                 <div>
-                    <h4 class="text-white font-bold text-sm mb-0.5">ADOM SERVICES</h4>
+                    <h4 class="text-white font-bold text-sm mb-0.5 group-hover:text-pink-400 transition">ADOM SERVICES</h4>
                     <p>L'aide à domicile de proximité.</p>
                 </div>
-            </div>
+            </a>
             <div>
                 <h4 class="text-white font-semibold text-sm mb-2">Coordonnées</h4>
                 <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-pink-500"></i> <a class="global-phone-href text-slate-400 hover:text-white transition"><span class="global-phone"></span></a></p>
