@@ -56,9 +56,9 @@
     <!-- SECTION ACCUEIL -->
     <section id="accueil" class="relative pt-40 pb-20 text-center px-4 overflow-hidden" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
         
-        <!-- FILIGRANE AJUSTÉ : Fixe (sans clignotement), opacité renforcée à 15% et calé sur la droite -->
-        <div class="absolute inset-y-0 right-0 z-0 flex items-center justify-end pointer-events-none select-none w-1/2 overflow-hidden">
-            <img src="LOGO TRANSP_2.png" alt="" class="w-[450px] md:w-[650px] max-w-none h-auto opacity-[0.15] object-contain translate-x-12 md:translate-x-20 block">
+        <!-- FILIGRANE REPOSITIONNÉ VERS LE BAS : Placé en bas à droite (bottom-0) avec une translation pour déborder sur la suite de la page -->
+        <div class="absolute bottom-0 right-0 z-0 flex items-end justify-end pointer-events-none select-none w-1/2 h-full overflow-visible">
+            <img src="LOGO TRANSP_2.png" alt="" class="w-[450px] md:w-[650px] max-w-none h-auto opacity-[0.15] object-contain translate-x-12 md:translate-x-20 translate-y-24 md:translate-y-32 block">
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
@@ -132,7 +132,7 @@
     </section>
 
     <!-- SECTION AGENCE -->
-    <section id="agence" class="py-20 px-4 bg-white border-t border-slate-100">
+    <section id="agence" class="py-20 px-4 bg-white border-t border-slate-100 relative z-10">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest block mb-2 text-[#ec4899]">Structure Humaine</span>
