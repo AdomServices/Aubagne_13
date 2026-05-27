@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ADOM SERVICES - L'aide à domicile de proximité à Aubagne. Services de qualité pour seniors et personnes en difficulté.">
+    <meta name="theme-color" content="#ec4899">
     <title>ADOM SERVICES - L'aide à domicile de proximité</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23ec4899' width='100' height='100'/><text x='50' y='70' font-size='80' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-slate-50 font-sans antialiased text-slate-900">
@@ -14,12 +17,13 @@
         const CONFIG = {
             nomEntreprise: "ADOM SERVICES",
             telephone: "04 42 01 30 13",
-            email: "adomservices13400@gmail.com",
+            email: "contact@adomservices.fr",
             adresse: "7 avenue Roger Salengro",
             codePostal: "13400",
             ville: "AUBAGNE",
             numeroAgrement: "SAP/504789363",
-            anneeCreation: 2008
+            anneeCreation: 2008,
+            formspreeId: "xyzpqnba" // À remplacer par votre ID Formspree
         };
         
         document.addEventListener("DOMContentLoaded", () => {
@@ -35,10 +39,21 @@
         });
     </script>
 
+    <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <img src="LOGO TRANSP.png" alt="Logo ADOM SERVICES" class="w-10 h-10 object-contain">
+                <!-- LOGO SVG INTÉGRÉ -->
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="100" height="100" rx="15" fill="url(#logoGradient)"/>
+                    <text x="50" y="70" font-size="70" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">A</text>
+                </svg>
                 <span class="font-bold text-xl tracking-tight text-slate-950">ADOM SERVICES</span>
             </div>
             <div class="hidden md:flex gap-8 items-center font-semibold text-slate-700 text-sm">
@@ -50,6 +65,7 @@
         </div>
     </nav>
 
+    <!-- SECTION ACCUEIL -->
     <section id="accueil" class="pt-36 pb-20 text-center px-4" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff, #f8fafc);">
         <div class="max-w-7xl mx-auto relative z-10">
             <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-slate-950 mb-6" style="background: linear-gradient(135deg, #ec4899, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
@@ -121,6 +137,7 @@
         </div>
     </section>
 
+    <!-- SECTION AGENCE -->
     <section id="agence" class="py-20 px-4 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -139,6 +156,7 @@
         </div>
     </section>
 
+    <!-- SECTION RECRUTEMENT -->
     <section id="recrutement" class="py-16 px-4 text-white text-center" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-2xl font-bold mb-3">Rejoignez notre équipe à Aubagne</h2>
@@ -147,28 +165,41 @@
         </div>
     </section>
 
+    <!-- SECTION CONTACT / FORMULAIRE -->
     <section id="contact" class="py-20 px-4 bg-slate-50">
         <div class="max-w-2xl mx-auto bg-slate-900 rounded-3xl p-8 text-white shadow-xl" style="background: linear-gradient(135deg, #0f172a, #1e1b4b);">
             <div class="text-center mb-8">
                 <h2 class="text-2xl font-bold">Contact / Demande de devis</h2>
                 <p class="text-slate-400 text-xs mt-1">Étude gratuite et réponse sous 48h.</p>
             </div>
-            <form onsubmit="alert('Merci, votre demande a bien été envoyée.'); return false;" class="space-y-4 text-slate-900">
+            <form id="contactForm" action="https://formspree.io/f/xyzpqnba" method="POST" class="space-y-4 text-slate-900">
                 <div class="grid sm:grid-cols-2 gap-4">
-                    <input type="text" required placeholder="Nom & Prénom" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
-                    <input type="tel" required placeholder="Téléphone" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
+                    <input type="text" name="name" required placeholder="Nom & Prénom" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 focus:ring-pink-500">
+                    <input type="tel" name="phone" required placeholder="Téléphone" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 focus:ring-pink-500">
                 </div>
-                <input type="email" required placeholder="Adresse Email" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none">
-                <textarea placeholder="Décrivez votre besoin..." rows="3" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none"></textarea>
-                <button type="submit" class="w-full text-white font-bold py-3 rounded-xl text-sm transition shadow-md" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">Envoyer la demande</button>
+                <input type="email" name="email" required placeholder="Adresse Email" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 focus:ring-pink-500">
+                <textarea name="message" placeholder="Décrivez votre besoin..." rows="3" class="w-full bg-white px-4 py-3 rounded-xl text-sm outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                <button type="submit" class="w-full text-white font-bold py-3 rounded-xl text-sm transition shadow-md hover:brightness-110" style="background: linear-gradient(to right, #ec4899, #8b5cf6);">Envoyer la demande</button>
             </form>
+            <p class="text-center text-slate-400 text-xs mt-4">Vos données ne seront jamais partagées. Nous les utilisons uniquement pour vous répondre.</p>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="text-slate-400 px-4 py-12 text-xs" style="background-color: #020617;">
         <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
             <div class="flex items-center gap-3">
-                <img src="LOGO TRANSP.png" alt="Logo" class="w-10 h-10 object-contain bg-white rounded-lg p-1">
+                <!-- LOGO SVG INTÉGRÉ (FOOTER) -->
+                <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 bg-white rounded-lg p-1">
+                    <defs>
+                        <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="100" height="100" rx="15" fill="url(#logoGradientFooter)"/>
+                    <text x="50" y="70" font-size="70" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">A</text>
+                </svg>
                 <div>
                     <h4 class="text-white font-bold text-sm mb-0.5">ADOM SERVICES</h4>
                     <p>L'aide à domicile de proximité.</p>
@@ -176,8 +207,8 @@
             </div>
             <div>
                 <h4 class="text-white font-semibold text-sm mb-2">Coordonnées</h4>
-                <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-pink-500"></i> <a class="global-phone-href text-slate-400 hover:text-white"><span class="global-phone"></span></a></p>
-                <p class="mb-1"><i class="fa-solid fa-envelope mr-1 text-pink-500"></i> <a class="global-email-href text-slate-400 hover:text-white"><span class="global-email"></span></a></p>
+                <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-pink-500"></i> <a class="global-phone-href text-slate-400 hover:text-white transition"><span class="global-phone"></span></a></p>
+                <p class="mb-1"><i class="fa-solid fa-envelope mr-1 text-pink-500"></i> <a class="global-email-href text-slate-400 hover:text-white transition"><span class="global-email"></span></a></p>
                 <p><i class="fa-solid fa-map-pin mr-1 text-pink-500"></i> <span class="global-adresse"></span></p>
             </div>
             <div>
