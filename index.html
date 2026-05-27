@@ -41,8 +41,9 @@
     <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 shadow-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Logo de navigation légèrement agrandi -->
             <a href="#accueil" class="flex items-center h-full hover:opacity-90 transition">
-                <img src="New LOGO png.png" alt="ADOM SERVICES - L'aide à domicile de proximité" class="h-14 w-auto object-contain">
+                <img src="New LOGO png.png" alt="ADOM SERVICES - L'aide à domicile de proximité" class="h-16 w-auto object-contain">
             </a>
             <div class="hidden md:flex gap-8 items-center font-semibold text-slate-700 text-sm">
                 <a href="#missions" class="transition hover:text-[#ec4899]">Nos Missions</a>
@@ -53,76 +54,84 @@
         </div>
     </nav>
 
-    <!-- SECTION ACCUEIL (Avec la photo de la façade intégrée en arrière-plan) -->
-    <section id="accueil" class="relative pt-40 pb-20 text-center px-4 overflow-hidden bg-slate-900">
+    <!-- SECTION ACCUEIL -->
+    <section id="accueil" class="relative pt-36 pb-20 text-center px-4 overflow-hidden bg-slate-900">
         
-        <!-- IMAGE DE FOND (FACADE) AVEC UN VOILE SOMBRE POUR ASSURER LA LISIBILITÉ DU TEXTE -->
+        <!-- IMAGE DE FOND (FACADE) -->
         <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-25" style="background-image: url('facadeaubagne.jpeg');"></div>
         
-        <!-- DEGRADÉ DE SÉCURITÉ POUR FONDRE L'IMAGE VERS LE BAS -->
-        <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), #0f172a);"></div>
+        <!-- DEGRADÉ DE SÉCURITÉ -->
+        <div class="absolute inset-0 z-0" style="background: linear-gradient(to bottom, rgba(15, 23, 42, 0.35), #0f172a);"></div>
 
-        <!-- LOGO TRANSPARENT EN FILIGRANE TOUJOURS LÀ EN BAS À DROITE -->
+        <!-- FILIGRANE LOGO EN BAS À DROITE -->
         <div class="absolute bottom-0 right-0 z-0 flex items-end justify-end pointer-events-none select-none w-1/2 h-full overflow-visible">
             <img src="LOGO TRANSP_2.png" alt="" class="w-[450px] md:w-[650px] max-w-none h-auto opacity-[0.12] object-contain translate-x-12 md:translate-x-20 translate-y-24 md:translate-y-32 block">
         </div>
 
         <div class="max-w-7xl mx-auto relative z-10">
-            <!-- Modification de la couleur du titre pour qu'il ressorte parfaitement sur la photo de fond -->
-            <h1 class="text-5xl sm:text-7xl font-extrabold leading-tight text-white mb-6 relative z-10">
+            
+            <!-- BLOC LOGO MAJEUR ET DOMINANT EN CENTRAL ACCUEIL -->
+            <div class="flex justify-center mb-8 relative z-20">
+                <div class="bg-white/95 p-4 rounded-2xl shadow-2xl border-2 border-purple-500/20 max-w-[280px] md:max-w-[340px] transition hover:scale-105 duration-300">
+                    <img src="New LOGO png.png" alt="Logo Officiel ADOM SERVICES" class="w-full h-auto object-contain">
+                </div>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight text-white mb-6 relative z-10 tracking-tight">
                 L'aide à domicile de proximité
             </h1>
             <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-16 relative z-10">
                 De l'accompagnement du grand âge au confort quotidien. Votre partenaire de confiance à <strong class="text-white">Aubagne</strong> depuis <span class="txt-exp font-bold text-pink-400">18 Ans</span>.
             </p>
 
-            <div id="missions" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left relative z-10">
+            <!-- GRILLE DE MISSIONS : Tuiles blanches très légèrement violacées translucides -->
+            <div id="missions" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto text-left relative z-10">
                 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-pink-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-person-cane"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-pink-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-person-cane"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Accompagnement Sénior</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Aide au lever, coucher, toilette et présence rassurante pour le maintien chez soi.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-pink-300 transition-colors">Accompagnement Sénior</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Aide au lever, coucher, toilette et présence rassurante pour le maintien chez soi.</p>
                     </div>
                 </div>
 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-purple-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-broom"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-purple-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-broom"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Ménage & Entretien</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Entretien complet de votre logement, dépoussiérage, nettoyage et gestion du cadre de vie.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-purple-300 transition-colors">Ménage & Entretien</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Entretien complet de votre logement, dépoussiérage, nettoyage et gestion du cadre de vie.</p>
                     </div>
                 </div>
 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-pink-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-car-side"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-pink-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-car-side"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Transport Accompagné</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Aide aux déplacements pour vos courses, vos rendez-vous médicaux et sorties sociales.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-pink-300 transition-colors">Transport Accompagné</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Aide aux déplacements pour vos courses, vos rendez-vous médicaux et sorties sociales.</p>
                     </div>
                 </div>
                 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-purple-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-dumpster"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-purple-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-dumpster"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Déblaiement d'espace</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Vider caves, garages, greniers encombrés et remise en état des espaces techniques.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-purple-300 transition-colors">Déblaiement d'espace</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Vider caves, garages, greniers encombrés et remise en état des espaces techniques.</p>
                     </div>
                 </div>
 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-pink-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-utensils"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-pink-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #fdf2f8; color: #ec4899;"><i class="fa-solid fa-utensils"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Préparation des Repas</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Confection de menus variés et équilibrés à votre domicile, selon vos goûts et régimes.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-pink-300 transition-colors">Préparation des Repas</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Confection de menus variés et équilibrés à votre domicile, selon vos goûts et régimes.</p>
                     </div>
                 </div>
 
-                <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-slate-800 shadow-xl hover:border-purple-500/50 transition flex gap-5 items-start">
-                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-inner" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-shirt"></i></div>
+                <div class="bg-white/[0.07] backdrop-blur-md rounded-2xl p-6 border border-purple-500/15 shadow-xl hover:bg-white/[0.12] hover:border-purple-500/40 transition-all duration-300 flex gap-5 items-start group">
+                    <div class="w-14 h-14 rounded-xl flex items-center justify-center text-3xl shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300" style="background-color: #f5f3ff; color: #8b5cf6;"><i class="fa-solid fa-shirt"></i></div>
                     <div>
-                        <h3 class="text-lg font-bold mb-1 text-white">Entretien du Linge</h3>
-                        <p class="text-slate-400 text-sm leading-relaxed">Lavage, séchage, pliage et repassage professionnel de votre linge de maison.</p>
+                        <h3 class="text-lg font-bold mb-1 text-white group-hover:text-purple-300 transition-colors">Entretien du Linge</h3>
+                        <p class="text-slate-300/90 text-sm leading-relaxed">Lavage, séchage, pliage et repassage professionnel de votre linge de maison.</p>
                     </div>
                 </div>
             </div>
